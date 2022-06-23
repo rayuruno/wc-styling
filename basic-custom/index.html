@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :not(:defined) {
+        display: none;
+      }
+      c-button {
+        --surface-color: pink;
+      }
+      :root {
+        --text-color: yellow;
+      }
+      c-input::part(label) {
+        text-decoration: underline;
+      }
+    </style>
+    <script type="module" src="./c-button.js"></script>
+    <script type="module" src="./c-input.js"></script>
+  </head>
+  <body>
+    <c-button>c button</c-button>
+    <c-input>c input</c-input>
+  </body>
+</html>

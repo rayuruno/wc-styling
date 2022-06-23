@@ -1,0 +1,38 @@
+
+  button {
+    all: unset;
+    display: inline-block;
+    border: none;
+    background: transparent;
+    color: inherit;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+    button {
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      background: rgba(26, 80, 89, 1);
+        color: rgba(255, 255, 255, 1);
+        font-family: Noto Sans;
+        font-size: 0.88rem;
+        font-weight: 500;
+        letter-spacing: 0rem;
+        line-height: 1.31rem;
+        text-align: center;
+        vertical-align: middle
+    }
+    button:hover {
+      background: rgba(44, 94, 102, 1);
+    }
+    button:active {
+      background: rgba(44, 94, 102, 1);
+    }
+    button:focus-visible {
+      outline: 0.19rem solid rgba(0, 149, 255, 1);
+      outline-offset: calc(-0.06rem * -1);
+    }
+    button:disabled,
+    :host([disabled]) button {
+      background-color: rgba(229, 229, 229, 1);
+      pointer-events: none;
+    }

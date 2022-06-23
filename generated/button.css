@@ -1,0 +1,55 @@
+@file https://www.figma.com/file/jbODHCoYkrOebq4v26owbP/03-%5BComponents%5D-General;
+
+@select button.component-set {
+  button {
+    all: unset;
+    display: inline-block;
+    border: none;
+    background: transparent;
+    color: inherit;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  @select [type=common][style=filled][destructive=false][size=default][state=default] {
+    button {
+      padding: $padding;
+      border-radius: $borderRadius;
+      background: $backgroundColor;
+      @select .text {
+        color: $color;
+        @style text;
+      }
+    }
+  }
+
+  @select [type=common][style=filled][destructive=false][size=default][state=hover] {
+    button:hover {
+      background: $backgroundColor;
+    }
+  }
+
+  @select [type=common][style=filled][destructive=false][size=default][state=pressed] {
+    button:active {
+      background: $backgroundColor;
+    }
+  }
+
+  @select [type=common][style=filled][destructive=false][size=default][state=focus] state-focus {
+    button:focus-visible {
+      outline: $border;
+      outline-offset: calc($top * -1);
+    }
+  }
+
+  @select [type=common][style=filled][destructive=false][size=default][state=disabled] {
+    button:disabled,
+    :host([disabled]) button {
+      @style border;
+      @style background;
+      @style color;
+      @style blend;
+      pointer-events: none;
+    }
+  }
+}
